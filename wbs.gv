@@ -11,18 +11,9 @@ graph [];
 ;
 
 "WBS" -> "Body of Knowledge"
-subgraph cluster_0 {
-	"list of potentially\n interested persons\n and organizations"
-	-> "send/publish job offers"
-	-> "find supervisor"
-	-> "choose participants"
-	-> "kick-off meeting"
+	-> "hire staff"
 	-> "distribute topics";
-	label = "hire staff";
-	}
-"Body of Knowledge" -> "list of potentially\n interested persons\n and organizations";
-"distribute topics"	-> "regular feedback loop\n with supervisor"
-	-> "introductory text by supervisor"
+	-> "introductory text\n by supervisor"
 	-> "peer review"
 	-> "publication"
 	-> "evaluation and feedback from\n funding organizations"
@@ -32,13 +23,14 @@ subgraph cluster_0 {
 "WBS" -> "WWW & Flyers";
 "WWW & Flyers" -> "WWW";
 "WWW" -> "platform & technology"
-	-> "assemble team"
+	-> "hire team"
 	-> "evaluate fitting solution"
 	-> "implement solution";
 "WWW" -> "content"
-	-> "assemble content creation team"
+	-> "hire content creation team"
 	-> "guidelines"
 	-> "establish editorial workflows"
+	-> "create content"
 	-> "publish content";
 "WWW & Flyers"
 	-> "Flyers"

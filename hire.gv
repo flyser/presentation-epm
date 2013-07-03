@@ -1,0 +1,10 @@
+digraph G {
+node [shape=record];
+graph [];
+
+	"list of potentially\n interested persons\n and organizations"
+	-> "send/publish job offers"
+	-> "find supervisor"
+	-> "choose participants"
+	-> "kick-off meeting";
+}
