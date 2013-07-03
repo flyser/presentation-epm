@@ -28,7 +28,7 @@ graph [];
 	-> "implement solution";
 "WWW" -> "content"
 	-> "hire content creation team"
-	-> "guidelines"
+	-> "develop guidelines"
 	-> "establish editorial workflows"
 	-> "create content"
 	-> "publish content";
