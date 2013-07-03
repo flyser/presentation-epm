@@ -11,15 +11,19 @@ graph [];
 ;
 
 "WBS" -> "Body of Knowledge"
-	-> "list of potentially\n interested persons\n and organizations"
+subgraph cluster_0 {
+	"list of potentially\n interested persons\n and organizations"
 	-> "send/publish job offers"
 	-> "find supervisor"
 	-> "choose participants"
 	-> "kick-off meeting"
-	-> "distribute topics"
-	-> "regular feedback loop\n with supervisor"
+	-> "distribute topics";
+	label = "hire staff";
+	}
+"Body of Knowledge" -> "list of potentially\n interested persons\n and organizations";
+"distribute topics"	-> "regular feedback loop\n with supervisor"
 	-> "introductory text by supervisor"
-	-> "oeer review"
+	-> "peer review"
 	-> "publication"
 	-> "evaluation and feedback from\n funding organizations"
 	-> "maybe: cancel"
