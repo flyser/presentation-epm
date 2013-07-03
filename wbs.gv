@@ -12,7 +12,7 @@ graph [];
 
 "WBS" -> "Body of Knowledge"
 	-> "hire staff"
-	-> "distribute topics";
+	-> "distribute topics"
 	-> "introductory text\n by supervisor"
 	-> "peer review"
 	-> "publication"
