@@ -1,0 +1,46 @@
+digraph g {
+node [shape=record];
+graph [];
+
+"WBS";
+
+"WBS" -> "Financing & Funding"
+	-> "list of sources"
+	-> "exposé"
+	-> "pitch to potential\n funding organizations"
+;
+
+"WBS" -> "Body of Knowledge"
+	-> "list of potentially\n interested persons\n and organizations"
+	-> "send/publish job offers"
+	-> "find supervisor"
+	-> "choose participants"
+	-> "kick-off meeting"
+	-> "distribute topics"
+	-> "regular feedback loop\n with supervisor"
+	-> "introductory text by supervisor"
+	-> "oeer review"
+	-> "publication"
+	-> "evaluation and feedback from\n funding organizations"
+	-> "maybe: cancel"
+;
+
+"WBS" -> "WWW & Flyers";
+"WWW & Flyers" -> "WWW";
+"WWW" -> "platform & technology"
+	-> "assemble team"
+	-> "evaluate fitting solution"
+	-> "implement solution";
+"WWW" -> "content"
+	-> "assemble content creation team"
+	-> "guidelines"
+	-> "establish editorial workflows"
+	-> "publish content";
+"WWW & Flyers"
+	-> "Flyers"
+;
+
+"WBS" -> "Education";
+
+"WBS" -> "Cohesion";
+}
