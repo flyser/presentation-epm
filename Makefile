@@ -1,10 +1,12 @@
-TITLE=epm-presentation
+TITLE=presentation
 PDFDIR=pdf
 BUILDDIR=build
 
 all: slides
 
-slides: pdfdir builddir
+graphics: build/wbs.png build/hire.png
+
+slides: pdfdir builddir graphics
 	cd $(BUILDDIR) && \
 		pdflatex ../$(TITLE).tex -output-directory ../$(PDFDIR)
 	mv $(BUILDDIR)/$(TITLE).pdf $(PDFDIR)
@@ -19,5 +21,5 @@ clean:
 	-rm $(PDFDIR)/*.pdf
 	-rm -r $(BUILDDIR)
 
-wbs.png: builddir
-	dot -Tpng wbs.gv -o $(BUILDDIR)/wbs.png
+$(BUILDDIR)/%.png: %.gv builddir
+	dot -Tpng $< -o $@
