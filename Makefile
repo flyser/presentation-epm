@@ -1,18 +1,13 @@
 TITLE=presentation
-PDFDIR=pdf
 BUILDDIR=build
 
 all: slides
 
 graphics: build/wbs.png build/hire.png
 
-slides: pdfdir builddir graphics
+slides: builddir graphics
 	cd $(BUILDDIR) && \
-		pdflatex ../$(TITLE).tex -output-directory ../$(PDFDIR)
-	mv $(BUILDDIR)/$(TITLE).pdf $(PDFDIR)
-
-pdfdir:
-	mkdir -p $(PDFDIR)
+		pdflatex ../$(TITLE).tex
 
 builddir:
 	mkdir -p $(BUILDDIR)
