@@ -18,3 +18,6 @@ clean:
 
 $(BUILDDIR)/%.png: %.gv builddir
 	dot -Tpng $< -o $@
+
+deploy: build
+	scp $(BUILDDIR)/$(TITLE).pdf hanneseichblatt.de:public/epm.hanneseichblatt.de/data/media/
