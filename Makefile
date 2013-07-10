@@ -7,7 +7,7 @@ graphics: build/wbs.png build/hire.png
 
 slides: builddir graphics
 	cd $(BUILDDIR) && \
-		pdflatex ../$(TITLE).tex
+		pdflatex ../$(TITLE).tex && \
 		pdflatex ../$(TITLE).tex
 
 builddir:
